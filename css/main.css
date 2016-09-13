@@ -39,7 +39,7 @@ body {
 }
 
 h1 {
-	margin: 0;
+	margin: 0 0 10px;
   font-family: 'graphik-web-medium', helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: .4px;
@@ -58,9 +58,27 @@ h2 {
 }
 
 h3 {
-  font-size: 16px; 
+  font-size: 14px; 
   font-family: 'graphik-web-regular', helvetica, sans-serif;  
+  text-transform: uppercase;
+  
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0px 0 40px;
 }
+
+.green {
+  color: #1BD9A9;
+}
+
+.pink {
+  color: #888;
+}
+
+.orange {
+  color: #FFE6D0;
+}
+
 
 h4 {
   font-size: 14px;
@@ -69,7 +87,7 @@ h4 {
 }
 
 p {
-  line-height: 1.7em; 
+  line-height: 1.8em; 
   margin-bottom: 25px;
   font-family: 'graphik-web-regular', helvetica, sans-serif;
   font-weight: normal;
@@ -82,21 +100,17 @@ b {
 
 /* Links */
 a {
-  color: #888;
+  color: #1BD9A9;
   word-wrap: break-word;
   cursor: pointer;
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 a:hover,
 a:focus {
-    color: #aaa;
-    text-decoration: underline dotted;
+    border-bottom: 1px dotted #1BD9A9;
+    text-decoration: none;
     outline: 0;
+    color: #1BD9A9;
 }
 
 a:before,
@@ -108,21 +122,19 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
   }
 
-
-/*nav*/
-.navbar-brand {
-  font-family: 'graphik-web-medium', helvetica, sans-serif;
-  color: #000;
-}
-
-
 .navbar {
-  margin-bottom: 0px;
-    padding: 40px 0px;
+  margin: 40px 0 0px;
+  padding: 40px 0px;
 }
 
 a.active {
     font-family: 'graphik-web-medium';
+}
+
+hr {
+  border: 1.5px dashed #fff;
+  max-width: 50%;
+  margin: 100px 0 0;
 }
 
 .hero-background-image {
@@ -139,13 +151,11 @@ a.active {
   .hero-background-image {opacity: .4;}
 }
 
-/*index about*/
-section.about-me {
-  padding-top: 50px;
+.about-me {
+  padding-top: 60px;
 }
 
 .about-me p {
-  margin-bottom: 40px;
   max-width: 600px;
 }
 
