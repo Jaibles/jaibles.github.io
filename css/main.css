@@ -114,20 +114,11 @@ a:focus {
 }
 
 input {
-<<<<<<< Updated upstream
-  padding: 8px 8px;
-  border-radius: 2px;
-  min-width: 230px;
-  border: 1px solid #e5e5e5;
-=======
     padding: 8px 8px !important;
   border-radius: 2px !important;
   min-width: 230px !important;
   border: 2px solid #e5e5e5 !important;
   max-width: 400px !important;
-    border: 2px solid #e5e5e5 !important;
-  height: 40px !important;
->>>>>>> Stashed changes
 }
 
 label {
@@ -135,8 +126,12 @@ label {
   max-width: 100%;
   font-size: 16px;
   font-family: 'graphik-web-regular', helvetica, sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px !important;
   font-weight: 400;
+}
+
+#mc_embed_signup form {
+  padding: 0 !important;
 }
 
 input[type=submit] {
@@ -146,6 +141,15 @@ input[type=submit] {
   height: 42px;
   font-size: 16px;
   font-family: 'graphik-web-regular', helvetica, sans-serif;
+}
+
+#mc_embed_signup .button {
+ background: #1BD9A9 !important;
+  display: block !important;
+  border: none !important;
+  height: 42px !important;
+  font-size: 16px !important;
+  font-family: 'graphik-web-regular', helvetica, sans-serif !important; 
 }
 
 #mc_embed_signup {
