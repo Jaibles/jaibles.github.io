@@ -114,10 +114,20 @@ a:focus {
 }
 
 input {
+<<<<<<< Updated upstream
   padding: 8px 8px;
   border-radius: 2px;
   min-width: 230px;
   border: 1px solid #e5e5e5;
+=======
+    padding: 8px 8px !important;
+  border-radius: 2px !important;
+  min-width: 230px !important;
+  border: 2px solid #e5e5e5 !important;
+  max-width: 400px !important;
+    border: 2px solid #e5e5e5 !important;
+  height: 40px !important;
+>>>>>>> Stashed changes
 }
 
 label {
