@@ -1,0 +1,20 @@
+/*
+* Specific styles of signin component
+*/
+/*
+* General styles
+*/
+body, html {
+  background: url('../assets/Audi-Q3-Front-Light@2x.png') fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.card-opaque {
+  background: rgba(255,255,255,.24);
+  border: 1px solid #fff;
+}
