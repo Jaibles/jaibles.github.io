@@ -211,6 +211,12 @@ hr {
   color: #666;
 }
 
+.sm-grey {
+  color: #666;
+  font-size: 14px;
+  line-height: 2;
+}
+
 /* -----
 SVG Icons - svgicons.sparkk.fr
 ----- */
