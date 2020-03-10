@@ -9,10 +9,10 @@
 
 @font-face {
   font-family: 'graphik-web-regular';
-  src: 
+  src:
     url('../fonts/graphik-web-regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/graphik-web-regular.woff') format('woff'), 
-    url('../fonts/graphik-web-regular.ttf')  format('truetype'), 
+    url('../fonts/graphik-web-regular.woff') format('woff'),
+    url('../fonts/graphik-web-regular.ttf')  format('truetype'),
     url('../fonts/graphik-web-regular.svg#graphik-web-regular') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -20,16 +20,14 @@
 
 @font-face {
   font-family: 'graphik-web-medium';
-  src: url('../fonts/graphik-web-medium.eot?#iefix') format('embedded-opentype'),  
-  url('../fonts/graphik-web-medium.woff') format('woff'), 
-  url('../fonts/graphik-web-medium.ttf')  format('truetype'), 
+  src: url('../fonts/graphik-web-medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/graphik-web-medium.woff') format('woff'),
+  url('../fonts/graphik-web-medium.ttf')  format('truetype'),
   url('../fonts/graphik-web-medium.svg#graphik-web-medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
   background-color: white;
@@ -43,7 +41,7 @@ h1 {
   font-family: 'graphik-web-medium', helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: .4px;
-  font-size: 21px;
+  font-size: 24px;
   color: #000;
   line-height: 0.9em;
 }
@@ -58,10 +56,10 @@ h2 {
 }
 
 h3 {
-  font-size: 14px; 
-  font-family: 'graphik-web-regular', helvetica, sans-serif;  
+  font-size: 14px;
+  font-family: 'graphik-web-regular', helvetica, sans-serif;
   text-transform: uppercase;
-  
+
   font-weight: 600;
   letter-spacing: 1px;
   margin: 0px 0 32px;
@@ -87,7 +85,7 @@ h4 {
 }
 
 p, span {
-  line-height: 1.8em; 
+  line-height: 1.8em;
   margin-bottom: 25px;
   font-family: 'graphik-web-regular', helvetica, sans-serif;
   font-weight: normal;
@@ -102,33 +100,16 @@ b {
 a {
   color: #18C297;
   word-wrap: break-word;
+  text-decoration: none;
   cursor: pointer;
   font-family: 'graphik-web-regular', helvetica, sans-serif;
 }
 
 a:hover,
 a:focus {
-    border-bottom: 1px dotted #1BD9A9;
     text-decoration: none;
     outline: 0;
     color: #1BD9A9;
-}
-
-input {
-    padding: 8px 8px !important;
-  border-radius: 2px !important;
-  min-width: 230px !important;
-  border: 2px solid #e5e5e5 !important;
-  max-width: 400px !important;
-}
-
-label {
-  display: block;
-  max-width: 100%;
-  font-size: 16px;
-  font-family: 'graphik-web-regular', helvetica, sans-serif;
-  margin-bottom: 9px !important;
-  font-weight: 400;
 }
 
 ul {
@@ -138,45 +119,51 @@ ul {
   max-width: 700px;
 }
 
-#mc_embed_signup form {
-  padding: 0 !important;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-input[type=submit] {
-  background: #1BD9A9;
-  display: block;
-  border: none;
-  height: 42px;
-  font-size: 16px;
-  font-family: 'graphik-web-regular', helvetica, sans-serif;
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
 }
 
-#mc_embed_signup .button {
- background: #1BD9A9 !important;
-  display: block !important;
-  border: none !important;
-  height: 42px !important;
-  font-size: 16px !important;
-  font-family: 'graphik-web-regular', helvetica, sans-serif !important; 
+.container:after {
+  clear: both;
 }
 
-#mc_embed_signup {
-  background: transparent !important;
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
 }
 
-.mc-field-group {
-  font-family: 'graphik-web-regular', helvetica, sans-serif;
-  margin-bottom: 30px;
+.container:after {
+  clear: both;
 }
 
-a:before,
-a:after {
-    -webkit-transition: color 0.2s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.2s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.2s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.2s ease-in, background 0.1s ease-in;
-    transition: color 0.2s ease-in, background 0.1s ease-in;
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
   }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1090px;
+  }
+}
+
 
 .navbar {
   margin: 40px 0 0px;
@@ -184,7 +171,7 @@ a:after {
 }
 
 a.active {
-    font-family: 'graphik-web-medium';
+  font-family: 'graphik-web-medium';
 }
 
 hr {
@@ -201,7 +188,7 @@ hr {
     margin-left: auto;
     opacity: 1;
     z-index: -1;
- } 
+ }
 
 @media (max-width: 768px) {
   .hero-background-image {opacity: .4;}
@@ -226,26 +213,6 @@ hr {
   margin-bottom: 10px;
 }
 
-/* -----
-SVG Icons - svgicons.sparkk.fr
------ */
-
-.svg-icon {
-  width: 1em;
-  height: 1em;
-}
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: #4691f6;
-}
-
-.svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
-}
-
 .featured-works {
   display: -webkit-box;
   display: -webkit-flex;
@@ -263,7 +230,7 @@ SVG Icons - svgicons.sparkk.fr
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }  
+  }
 }
 
 .featured-work {
@@ -273,28 +240,32 @@ SVG Icons - svgicons.sparkk.fr
   transition: all .2s ease-in-out;
   padding: 32px;
   height: 100%;
-  border: 2px solid #AAE4D7;
+  color: #fff;
+  background: #5A3FA1;
   border-radius: 3px;
-  background: rgba(255,255,255,.7);
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
   flex: 1;
   overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
   flex-direction: column;
 }
 
+.featured-work a {
+  color: #fff;
+}
+
 .featured-work:first-child {
-  border: 2px solid #C4BBFF;
   margin: 0px 16px 0 0;
+  background: #1C2F3D;
 }
 
 @media (max-width: 990px) {
@@ -305,11 +276,20 @@ SVG Icons - svgicons.sparkk.fr
 
 .featured-work:first-child .featured-work-title,
 .featured-work:first-child h2 a {
-  color: #5934f6 !important;
+  /* color: #5934f6 !important; */
 }
 
-.featured-work:first-child .featured-work-link {
-  color: #5934f6;
+.featured-work .featured-work-link {
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid rgba(255,255,255,.1);
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: all .2s ease;
+}
+
+.featured-work .featured-work-link:hover {
+  border: 2px solid rgba(255,255,255,.8);
 }
 
 .featured-work-title {
@@ -346,8 +326,8 @@ SVG Icons - svgicons.sparkk.fr
   width: 48px;
   height: 48px;
   margin: -2px 17px 0 0;
-    border: 2px solid #1BD9A9;
 }
+
 .profiler {
   width: 100%
 }
