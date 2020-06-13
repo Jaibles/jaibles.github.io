@@ -282,14 +282,14 @@ hr {
 .featured-work .featured-work-link {
   color: #fff;
   font-size: 14px;
-  border: 2px solid rgba(255,255,255,.1);
-  padding: 4px 8px;
+  background: rgba(255,255,255,.1);
+  padding: 12px 12px;
   border-radius: 3px;
   transition: all .2s ease;
 }
 
 .featured-work .featured-work-link:hover {
-  border: 2px solid rgba(255,255,255,.8);
+  background: rgba(255,255,255,.2);
 }
 
 .featured-work-title {
