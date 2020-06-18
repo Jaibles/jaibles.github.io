@@ -30,7 +30,7 @@
 
 
 body {
-  background-color: white;
+  background-color: #fffefc;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   color: #000;
@@ -52,7 +52,6 @@ h2 {
   font-size: 18px;
   font-weight: normal;
   letter-spacing: .4px;
-  color: #666;
 }
 
 h3 {
@@ -98,7 +97,8 @@ b {
 
 /* Links */
 a {
-  color: #18C297;
+  color: #242424;
+  border-bottom: 1px dotted #242424;
   word-wrap: break-word;
   text-decoration: none;
   cursor: pointer;
@@ -109,7 +109,6 @@ a:hover,
 a:focus {
     text-decoration: none;
     outline: 0;
-    color: #1BD9A9;
 }
 
 ul {
@@ -175,7 +174,7 @@ a.active {
 }
 
 hr {
-  border: 1.5px dashed #fff;
+  border: 1.5px dashed transparent;
   max-width: 50%;
   margin: 100px 0 0;
 }
@@ -239,10 +238,10 @@ hr {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   padding: 32px;
+  margin: 0 16px 16px 0;
   height: 100%;
-  color: #fff;
-  background: #5A3FA1;
-  border-radius: 3px;
+  color: #242424;
+  border-radius: 6px;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -260,40 +259,46 @@ hr {
 }
 
 .featured-work a {
-  color: #fff;
+  color: #242424;
+  border-bottom: none;
 }
 
-.featured-work:first-child {
-  margin: 0px 16px 0 0;
-  background: #1C2F3D;
+.bg-pink {
+  background: #FCD0C7;
+}
+
+.bg-blue {
+  background: #D4F2F3;
+}
+
+.bg-yellow {
+  background: #FFF1B5;
+}
+
+.bg-green {
+  background: #DBF3D0;
 }
 
 @media (max-width: 990px) {
-  .featured-work:first-child {
+  .featured-work {
     margin: 0px 0 16px 0;
   }
 }
 
-.featured-work:first-child .featured-work-title,
-.featured-work:first-child h2 a {
-  /* color: #5934f6 !important; */
-}
-
 .featured-work .featured-work-link {
-  color: #fff;
+  color: #242424;
   font-size: 14px;
   background: rgba(255,255,255,.1);
   padding: 12px 12px;
-  border-radius: 3px;
+  border-radius: 6px;
   transition: all .2s ease;
 }
 
 .featured-work .featured-work-link:hover {
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.6);
 }
 
 .featured-work-title {
-  color: #18C297;
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -311,7 +316,7 @@ hr {
 }
 
 .featured-work-desc {
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 
 .featured-work-time {
