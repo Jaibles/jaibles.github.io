@@ -315,8 +315,15 @@ hr {
 .featured-work-img {
   border-radius: 6px 6px 0 0;
   overflow: hidden;
-  height: 318px;
+  height: 310px;
 }
+
+@media (max-width: 990px) {
+  .featured-work-img {
+    height: 250px;
+  }
+}
+
 
 .featured-work-img img {
   width: 100%;
