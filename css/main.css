@@ -205,20 +205,57 @@ hr {
   color: #666;
 }
 
+.bg-grey {
+  background: rgba(243, 240, 233, 0.5);
+  background: #f3f0e9;
+  border-width: 1px;
+  border-color: #e8e7e4;
+}
+
+
 .bg-pink {
   background: #FCD0C7;
+  background:#f3f0e9;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e7e4;
 }
 
 .bg-blue {
   background: #D4F2F3;
+  background:#f3f0e9;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e7e4;
 }
 
 .bg-yellow {
   background: #FFF1B5;
+  background:#f3f0e9;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e7e4;
 }
 
 .bg-green {
   background: #DBF3D0;
+  background:#f3f0e9;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e7e4;
+}
+
+.bg-salmon {
+  background: #FFEADC;
+  background:#f3f0e9;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e7e4;
 }
 
 .sm-grey {
