@@ -150,9 +150,17 @@ ul {
   }
 }
 
+.flexbox {
+  display: flex;
+}
+
 .navbar {
   margin: 40px 0 0px;
   padding: 40px 0px;
+}
+
+a.nav-item {
+  border-bottom: none;
 }
 
 a.active {
@@ -355,4 +363,8 @@ hr {
 
 .profiler {
   width: 100%
+}
+
+.profile {
+  flex: 1;
 }
