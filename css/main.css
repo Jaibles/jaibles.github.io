@@ -154,6 +154,22 @@ ul {
   display: flex;
 }
 
+.mobile-show {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-hide {
+    display: none;
+  }
+
+  .mobile-show {
+    display: inline-block;
+    height: 24px;
+  }
+}
+
+
 .navbar {
   margin: 40px 0 0px;
   padding: 40px 0px;
@@ -205,7 +221,6 @@ hr {
   border-width: 1px;
   border-color: #e8e7e4;
 }
-
 
 .bg-pink {
   background: #FCD0C7;
