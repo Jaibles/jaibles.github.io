@@ -264,7 +264,7 @@ hr {
 }
 
 .featured-work {
-  padding: 32px 32px 0;
+  padding: 36px 32px 0;
   color: #242424;
   border-radius: 6px;
     display: -webkit-box;
@@ -307,16 +307,25 @@ hr {
 }
 
 .featured-work .featured-work-link {
-  color: #242424;
-  font-size: 14px;
-  border-radius: 6px;
   transition: all .2s ease;
   margin-bottom: 32px;
-  height: 17px;
+  height: 26px;
+  border-radius: 6px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  line-height: 1.8;
+  color: #666;
+  font-size: 16px;
+}
+
+.featured-work .featured-work-link:hover {
+  color: #635bff;
+  border: 1px solid #e8e7e4;
 }
 
 .featured-work-title {
   font-weight: 600;
+  font-size: 18px;
 }
 
 .featured-work-footer {
