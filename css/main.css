@@ -217,59 +217,10 @@ hr {
   max-width: 680px;
 }
 
-.bg-grey {
-  background: rgba(243, 240, 233, 0.5);
-  background: #fbfbf8;
-  border-width: 1px;
-  border-color: #e8e7e4;
-}
+
 
 .text-gray {
   color:#666 !important;
-}
-
-.bg-pink {
-  background: #FCD0C7;
-  background:#fbfbf8;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e8e7e4;
-}
-
-.bg-blue {
-  background: #D4F2F3;
-  background:#fbfbf8;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e8e7e4;
-}
-
-.bg-yellow {
-  background: #fbfbf8;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e8e7e4;
-}
-
-.bg-green {
-  background: #DBF3D0;
-  background:#f3f0e9;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e8e7e4;
-}
-
-.bg-salmon {
-  background: #FFEADC;
-  background:#f3f0e9;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e8e7e4;
 }
 
 .sm-grey {
@@ -312,6 +263,10 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e7e4;
+  background: #fbfbf8;
 }
 
 .about-me {
@@ -322,23 +277,21 @@ hr {
   margin-top: 24px;
 }
 
+.bg-grey-testimonial {
+  background: #fbfbf8;
+  padding: 80px 0 64px;
+  margin: 120px 0 0;
+  border-top: 1px solid #f5f5f5;
+}
+
 .testimonial {
   color: #242424;
   max-width: 640px;
-  margin: 0 auto;
   border-radius: 6px;
+}
 
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-  display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+.align-center {
+  margin: 0 auto;
 }
 
 .testimonial p, ol, span {
@@ -357,8 +310,9 @@ hr {
 }
 
 .footer {
-  border-top: 1px solid #f5f5f5;
+  border-top: 1px solid #e8e7e4;
   padding-top: 32px;
+  background: #fbfbf8;
 }
 
 .footer p {
