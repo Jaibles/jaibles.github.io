@@ -1,5 +1,5 @@
 /*
- * Author: Ciarab
+ * Author: Ciaran
  * URL: ciaran.design
  *
  * Project Name: Ciaran
@@ -42,6 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   color: #000;
+  margin: 0;
 }
 
 h1 {
@@ -200,11 +201,12 @@ ul {
 
 a.nav-item {
   border-bottom: none;
-  margin-left: 16px;
+  margin-left: 20px;
 }
 
-a.active {
-  font-family: 'graphik-web-medium';
+a.nav-item-active,
+a.nav-item:hover {
+  color: #635bff;
 }
 
 hr {
@@ -332,6 +334,11 @@ hr {
 }
 .featured-work-img img {
   width: 100%;
+}
+
+.cta {
+  margin: 80px auto;
+  text-align: center;
 }
 
 .featured-work a {
