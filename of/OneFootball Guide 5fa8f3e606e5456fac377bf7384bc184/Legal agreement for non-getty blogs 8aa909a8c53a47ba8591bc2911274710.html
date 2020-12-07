@@ -1,0 +1,628 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Legal agreement for non-getty blogs</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8aa909a8-c53a-47ba-8591-bc2911274710" class="page sans"><header><h1 class="page-title">Legal agreement for non-getty blogs</h1></header><div class="page-body"><p id="3999e34f-a18c-4408-8c87-65b6882be91e" class="">
+</p><h1 id="3918cc4b-979c-4874-9de3-3da35331b187" class=""><strong>ONEFOOTBALL NETWORK TERMS OF USE</strong></h1><p id="a2d7eb26-2370-4eae-a1eb-6112d56524d4" class=""><strong>1. Scope</strong></p><p id="9096a738-01d9-4e8f-b3b8-80cc16243917" class="">1.1 OneFootball develops, operates and markets internationally the most comprehensive media platform for football fans. OneFootball provides the mobile apps “OneFootball” on iOS and Android (“Apps”) as well as a web version “<a href="http://www.onefootball.com/">www.onefootball.com</a>”, where a football fan reads the latest news of favourite clubs and leagues, gets results of all the games, watches videos with relevant football content, can follow the favorite entities and receive push notifications of breaking news (together, the “Platforms”). OneFootball strives to combine selected authentic and emotional content from fans for fans on one platform.</p><p id="2df7ac81-0cf0-47ef-8d66-f77ce47c9f19" class="">1.2 The Partner operates a football fan site with generic or club/league specific content (“Site”). The content may vary and consist of, including, but not limited to, articles, texts, information, photographs, illustrations, videos, captions (“Content”).</p><p id="80899f57-bd61-4e78-a098-27198e1e42be" class=""><strong>2. Term</strong></p><p id="23f1511b-ec1f-4a3b-9080-c288f6833c14" class="">The Partner shall be bound by these Terms of Use (&quot; TOU&quot;) upon registration for the OneFootball Network. The Partners&#x27;s registration can be terminated any time by either party in text form (email being sufficient) with a notice period of one month; the Partner shall send any notice to the following email address: (<a href="mailto:network@onefootball..com">network@onefootball.com</a>). The right to terminate the contract for good cause with immediate effect shall be unaffected thereby.</p><p id="ef73d6ff-9f99-4f83-8dda-f68304bfa926" class=""><strong>3. Use of Content</strong></p><p id="ef79be88-02d1-4dfb-8d0f-0b7f90630cfc" class="">3.1 Two options to transmit Content to OneFootball:</p><p id="ba219319-9337-4fee-8223-f9ce503134b9" class="">a) The Partner makes the Content available via the Wordpress REST API. OneFootball will then transfer the Content to its own content management system (“CMS”) and then integrate it natively into the Platforms. The Partner agrees to make the Content available at all times except for maintenance on the Site. OR</p><p id="0d026238-e7fd-4508-9079-6ba799bf5114" class="">b) If applicable, the Partner will integrate OneFootball’s API and make Content available through the API with respective terms.</p><p id="ea5dc79e-b948-4da0-a9df-491b2918a64e" class="">c) OneFootball aims to further include the Partner&#x27;s Content from the Partner&#x27;s Social Media Channels (&quot; Partner&#x27;s Social Media Content&quot;) on the Platforms, once the technical environment is set up. The Parties agree that any such inclusion of Partner&#x27;s Social Media Content is subject to further consent of the Partner.</p><p id="b948401f-d67c-4c24-a9cd-1726304ff4a8" class="">3.2 Format and Content</p><p id="9de560c1-887f-4f95-bf64-92d36d4eb838" class="">a) The Partner agrees to remedy any problems appearing with the delivery of the content without undue delay.</p><p id="44d3fdd6-1dee-4d6e-b3dc-5382eab737e4" class="">b) The content will be tagged automatically using machine learning technology/text mining with relevant teams, competitions and/or players and distributed accordingly within the corresponding pages (clubs/leagues/players/competitions) within the Apps. Partner is not entitled to any specific placement of the Content within the Platforms, especially not regarding a placement within the first articles of curated collections and/or clubs/leagues/players/competitions pages. OneFootball offers the possibility to link to the legal notice of Partner’s Site.</p><p id="45bac022-aa3e-4698-a895-cfd239e06acd" class="">b) For any of the Partner Content, in whole or in part, that appears on the Platforms, OneFootball will</p><ul id="8106b06c-af7e-41ca-bdc3-87b1ca033737" class="bulleted-list"><li>include attribution to Partner in a manner to be determined by OneFootball, including but not limited to the logo (to be uploaded by Partner, &quot; Logo&quot;) and the Partner&#x27;s name and • tag it automatically with the Partner.</li></ul><p id="2e44c256-d603-4a69-b4f2-070f9ad8a4c8" class="">c) Any Partner Content shall have a link, provided by OneFootball, to the legal notice of Partner&#x27;s Site.</p><p id="6b168902-4835-4b6c-bba5-d14664222a60" class="">d) In the case of 3.1 b) the Partner chooses at his discretion what Content will be made available to OneFootball.</p><p id="c254e045-82ab-42f3-b713-8fa6910b91e6" class=""><strong>It is strictly forbidden to use</strong></p><ul id="c2881d18-f751-401b-a398-66ad8779f154" class="bulleted-list"><li><strong>these images on social media AND</strong></li></ul><ul id="90dc7bdf-243f-491e-b3b9-267865238fc9" class="bulleted-list"><li><strong>use a picture more than once.</strong></li></ul><p id="5766e4c6-090b-433a-bcd0-abfd1aa91c31" class="">All images have to include the photographer’s credits and the agency name, e.g. Imago/OneFootball. OneFootball is not obligated to provide the Partner with the licensed material. <strong>In case this Agreement is terminated, Partner agrees to return the account to OneFootball and cease the use of the material immediately, as well as if necessary, delete any images used and displayed during the term of this Agreement.</strong> In case the Partner continues the use of the material without authorisation, Partner will be liable for any licensing cost that is incurred.</p><p id="1d9ab291-280a-466c-ad3b-9a253fab5e89" class="">3.4 Reservation of Rights</p><p id="5ee917e6-64aa-40cb-bb9c-b9c8288e238b" class="">a) OneFootball reserves the right but is not obligated to remove individual Content that is likely to violate the provisions of these terms.</p><p id="c5f61fbf-62da-4190-b066-c7292297d80f" class="">b) OneFootball reserves the right to change and improve the Platforms.</p><p id="b8dc71b9-d54f-4e5e-b164-acf12cbc28b6" class="">c) OneFootball reserves the right to extent the distribution of Content within the Apps beyond the team, player or competition pages, including but not limited to sending a push notification or including it in curated collections.</p><p id="a433daa7-92ec-475c-bc8a-ffde6b393ef8" class="">d) OneFootball reserves the right to cease the provisioning of access to the Image Provider as described in 3.3.</p><p id="0d48869f-b97f-4ed8-bd64-f373fbda4e29" class="">e) OneFootball reserves the right to remove content, that contains advertising, sponsoring, product placement and similar promotional content (“branded content”) from the platform.</p><p id="d71a358e-2a27-4cf5-b66c-cbae7627b3a7" class="">3.5 Marketing</p><p id="ee69d3bc-30e1-401f-b00b-7a3f8ff201d2" class="">Partner authorizes OneFootball to monetize the Content on the Apps. Partner agrees that OneFootball exclusively may enable advertising in the Content within the Apps.</p><p id="2694d9cf-a377-41f6-8b47-655d70456e0e" class="">3.6 Removal of Content</p><p id="b3d71f58-9fc4-4987-aa89-b8289bed0135" class="">Partner shall be entitled to remove Content at any time. In case of 3a), OneFootball shall procure that, on written request (<a href="mailto:creators@onefootball.com">creators@onefootball.com</a>), Content is removed from the Platforms without undue delay. In case of 3.1 b), Partner may withdraw any Content by removing it from the Site.</p><p id="6acb9a2a-69ac-43d5-96dd-e466034a9414" class="">3.7 Reporting</p><p id="61aa9824-8272-4027-a0d1-3bef9399e53f" class="">OneFootball will provide a report on articles read within the Apps, updated on a daily basis.</p><p id="97fd2014-015e-4e27-a35d-780adf500e56" class=""><strong>4. Use of the Partners Portal</strong></p><p id="ba7a2b04-2757-4cbe-ad50-00f2cceaf17c" class="">4.1 The Partner is granted access to the Creators Portal in order to provide the information necessary for the display of his Partner content on the platforms, as well as to view the reports and revenues. If necessary, invoices can be created there directly in the account. The account may only be used for the purpose of fulfilling the contract.</p><p id="b1de77fc-fe1b-41e2-b1ba-c99fb659e522" class="">4.2 In order to create an account, an e-mail address must be provided which serves as the user name, a password must be chosen and then the URL, the display name, the color, the imprint and the logo of the site must be transmitted. Payment information can also be stored there.</p><p id="cc4d88aa-1341-469b-a404-8509cc987ddb" class="">4.3 The Partner undertakes to keep his password confidential. If unauthorized use of the password or account is discovered, the Partner is obliged to notify OneFootball immediately.</p><p id="0266fbe2-387d-46a3-927f-d2d37b5dc556" class="">4.4 The Partner agrees that this account is made available to Partner for the purpose of this Agreement only, and that the account may not be used for any other purpose unless expressly agreed to otherwise by OneFootball.</p><p id="3ded6064-1df3-422b-9215-01525d5ef779" class="">4.5 For information on the processing of personal data, please refer to the <a href="https://company.onefootball.com/campaigns/1841">Data Protection Declaration for the Creators Portal</a>.</p><p id="09738ee8-7ef6-4445-87f0-8d3fc47b745a" class="">4.6 Access to the Partners Portal will be disabled 30 days after this Agreement has ended.</p><p id="263cc7e8-a0c0-4461-ab5d-875f2d0cf079" class=""><strong>5. Payment</strong></p><p id="6e0fc0c7-cd36-4af4-9da2-485e03795526" class="">5.1 Terms</p><p id="7c650de8-2c6b-4c73-9252-131b92d56642" class="">a) OneFootball will pay a monthly sum based on a CPM (Cost per mille) based on the reporting (3.7) within specific countries. The rate will vary between three different tiers of countries, depending on the reader’s location. The currently applicable rate per tier is listed <a href="https://company.onefootball.com/campaigns/1740">here</a> and will be reviewed and adjusted from time to time.</p><p id="f67420a5-d4ed-44b6-b82d-2d070a99c0cc" class="">b) The amount owed will be communicated 14 days after the end of a calendar month, provided that Partner has earned at least EUR 50,00 or more. In case the amount is less, there will be no payment until the Partner has reached a minimum balance of EUR 50,00.</p><p id="1fc29c76-6709-4ed7-9751-057d61368f73" class="">c) Payment will be made 14 days after receipt of the proper invoice.</p><p id="f9c3f2fe-f7c5-4af3-a2c8-48858c6c5657" class="">d) In case the contract has been terminated, the outstanding amounts will be paid regardless of the balance within 30 days after the receipt of a proper invoice.</p><p id="9039d78a-6dc6-409e-b121-4f369881f795" class="">5.2 Limitations</p><p id="66400568-e886-4824-a6f4-6711fc6bd374" class="">OneFootball is not liable to pay any sum to Partner in case of fraudulently generated articles read either by a bot or a person, especially but not limited to originating from Partner’s IP addresses. In case the payment has already been initiated, Partner will either refund OneFootball or, if Partner is still active, apply a mutually agreed credit to future invoices.</p><p id="9f4d235b-b5a5-4590-90e6-df126809e247" class="">5.3 Payment information</p><p id="d392daef-b5cc-4268-9afc-650d5c6d507f" class="">a) To ensure proper payment, Partner is solely responsible for providing the correct payment information. Any bank fees due to returned or refused payment as a result of payment information error may be deducted from the next payment.</p><p id="abfa7e74-069e-4514-9d79-5c62c5a15514" class="">b) If applicable, the payment information provided within the Partners Portal account must be correct and updated at all times.</p><p id="7ebe323e-7516-4065-9fe1-c9fab60c4104" class=""><strong>6. Rights</strong></p><p id="b412defe-4aa9-4ab2-aa63-4911e3d8efd7" class="">6.1 Neither party will acquire any intellectual property rights under the Agreement. Partner shall be allowed to use the OneFootball logo and brand name in marketing materials, with prior written consent on a case by case basis, whereby a confirmation via e-mail (<a href="mailto:network@onefootball.com">network@onefootball.com</a>) shall be sufficient. Partner grants OneFootball a limited, non-exclusive worldwide, royalty-free license to use its logo, brand name and parts of the Content for the use in, including, but not limited to, connection with the sale, marketing and promotion of the Content, in presentations and marketing materials.</p><p id="ab5477c4-bf34-4f58-80ba-3b88f3b32f4d" class="">6.2 The Partner grants OneFootball a revocable and unrestricted right of use and exploitation of the Content for the duration of the Term, so that the Content can be placed and marketed on the Platforms in accordance with the terms of this Agreement.</p><p id="813886de-0bbf-4585-8767-84a31d83f5eb" class="">6.3 The Partner authorizes OneFootball to allow end users to use, view, access the Content within the range of then-current functions.</p><p id="2be8c1f9-c59c-4933-a620-000a1e716620" class="">6.4 The rights of use and exploitation include the right to publish, reproduce, distribute and store, make available to the public also through interactive products or services, the right of presentation as well as the right to reproduce images and sound carriers in printed and electronic form.</p><p id="2ac0e3ff-c19d-4189-a19c-3b3b139eec96" class="">6.5 Finally, the Parties grant each other a revocable, non-transferable, non-assignable, non-exclusive right of use with respect to their trademarks, signs and design elements, limited to the acts necessary for the performance of this Agreement.</p><p id="d41ecc41-cf11-4f15-b9be-8568fce4c093" class=""><strong>7. Prohibited Activities</strong></p><p id="03e69378-3a1d-4a22-a551-7ceaf49b9be7" class="">Partner ensures and guarantees that none of its content is pornographic, violent, hateful, illegal or rights-infringing. Furthermore, it is prohibited to make available unwanted, misleading or repetitive content (&quot;Spam&quot;). In the case that third parties alert OneFootball more than three times of violations of rights (in particular copyright, personal rights) of Partner, OneFootball will terminate this Agreement with immediate effect.</p><p id="3d7fdb13-d389-4406-bf92-e847c396a924" class=""><strong>8. Guarantees</strong></p><p id="55521118-65ff-4cd8-b115-d8fbef4fc968" class="">8.1 The Partner warrant that he dispose of any rights necessary to enter this Agreement. If someone clicks on behalf of a company in order to accept and agree to this Agreement, they warrant that they have the authority to represent and bind that company.</p><p id="d28fd502-eba4-4e31-9793-c4dca6ce955a" class="">8.2 The Partner warrants that it is the owner of the rights to the Site and to the Content and/or it has the rights, licenses, permissions and consents necessary to submit Content in accordance with this Agreement. In particular, it warrants that no claims have been asserted against them at the time of signing. Finally, the Partner is not aware of any legal disputes concerning the Site or the Content.</p><p id="d067a307-3c07-44d1-832b-abf4e6d5f009" class="">8.3 Furthermore, the Partner guarantees that it has all the rights and all the documents necessary to prove, assert and enforce these rights, which it requires in order to fulfil its obligations under this contract.</p><p id="b22a6fe1-aead-4694-8460-b3ba4e5aea54" class=""><strong>9. Survival</strong></p><p id="4267c1a3-4c1f-48c1-afef-e09f361147d2" class="">In the event of any termination or expiration of this Agreement for any reason, any provisions of this Agreement that are, by their nature, intended to survive termination or expiration shall survive.</p><p id="e04e91e6-1080-4bd7-8e36-7c4eab8d5ba1" class=""><strong>10. Confidentiality</strong></p><p id="70208cea-78c4-4b34-b123-ea3960381ac9" class="">This Agreement is being executed on a strictly confidential basis. The contents of this letter may not be disclosed to any third person or entity outside of the respective parties without the Parties prior written consent, except as required by applicable law. Employees of each party will only be informed of the content on a need-to-know basis.</p><p id="b06a3eff-e894-4593-88f8-30e0e2c2b929" class=""><strong>11. Liability</strong></p><p id="b57d12d9-642e-43f5-8a65-6365d41ca8e0" class="">11.1 Either Party shall only be liable towards the other Party for damages regardless of legal grounds in cases of intent or gross negligence by the damaging party&#x27;s executive bodies or their managing employees. In addition, there shall be liability on the merits in the event of negligent breach of essential contractual obligation(s) that endanger the purpose of the contract and that the other Party duly relies on (Kardinalspflichtverletzung/cardinal obligations); in the latter case, liability shall be limited to compensation for the typical, foreseeable damage. However, nothing in this Agreement shall limit either Party&#x27;s liability: (i) for fraud, (ii) for death or personal injury caused by a Party&#x27;s negligence or that of its servants or agents, or (iii) in relation to any other liability which cannot be excluded or limited by law.</p><p id="597ec510-62fb-4c74-84a2-f536a3a173c4" class="">11.2 Nothing in this Agreement shall operate to exclude, restrict or limit a party&#x27;s liability for death or personal injury caused by that party&#x27;s negligence, a party&#x27;s liability for fraud or fraudulent misrepresentation.</p><p id="b08d3284-53c8-4bac-9838-21393cbf0b2a" class="">11.3 Partner shall be liable for any breaches of guarantees accepted.</p><p id="289849c7-6859-4dc2-a6ea-2e95393bd119" class="">11.4 Any liability of OneFootball or its agents for other or further claims and damage, in particular claims for compensation for loss of profit, loss of use as well as loss of data shall be expressly excluded.</p><p id="95315956-1d33-4782-b4b6-7cc60d05c72f" class="">11.5 OneFootball shall not have any liability for any delay or failure to fulfill its obligations to the extent that such delay or failure arises from causes beyond the reasonable control of OneFootball, but not limited to, the failure of electronic or mechanical equipment or communication lines, third party action (including denial of service attack and overuse or misuse of the Apps), computer viruses, unauthorized access, theft, operator errors, fire, severe weather conditions, including floods, acts of God, acts or regulations of any regulatory, governmental or supranational authority, war, riot, industrial disputes and the cancellation or postponement of any event.</p><p id="dc0d8860-52a9-4d64-aa35-d2b7df1e8502" class=""><strong>12. Indemnity</strong></p><p id="ed1696d1-c88e-40ce-99d1-a6be01ee954d" class="">12.1 The Partner will defend and indemnify and hold harmless OneFootball and each of its subsidiaries, affiliates, agents, representatives, and their respective officers, directors, shareholders, and employees, from and against any and all losses, liabilities, damages and claims, and all related costs and expenses (including reasonable legal fees and disbursements and costs of investigation, litigation, settlement, judgement, interest and penalties) brought by a third party resulting from (i) the use of the Partner Content and/or the Partner Logo, or other material provided by Partner to OneFootball within the framework of this Agreement, or (ii) any breach of applicable data protection laws or regulations.</p><p id="d9ad75c1-e80e-4e2b-92c3-7d960f03bf98" class="">12.2 OneFootball will promptly notify the Partner of all claims of which it becomes aware of (provided that a failure or delay in providing such notice will not relieve the Partner‘s obligations except to the extent such party is prejudiced by such failure or delay) and will (i) provide reasonable cooperation to the Partner at the Partner’s expense in connection with the defense or settlement of all claims, and (ii) be entitled to participate at its own expense in the defense of all claims. OneFootball agrees that the Partner will have sole and exclusive control over the defense and settlement of all claims, provided, however, the Partner will not accept any judgment or enter into any settlement, either of which imposes any obligation or liability on OneFootball without its prior written consent.</p><p id="28323719-6efb-4d9b-897c-6d0b661216d2" class=""><strong>3. Miscellaneous</strong></p><p id="eeb06104-22a0-4c79-9051-265ad0ab8e08" class="">13.1 If any clause in these TOU, or any part of a clause, is found by any court, regulatory or administrative body of competent jurisdiction to be illegal, invalid or unenforceable, and the clause (or the part) in question is not of a fundamental nature to these TOU as a whole, then the legality, validity and enforceability of the remainder of these TOU (including the remainder of the clause which contains the relevant provision) shall not be affected.</p><p id="2f1d3188-2323-4563-a1b1-c629a5480fdd" class="">13.2 If these TOU are translated into any other language, and there is a discrepancy between the translated text and the English original, the English text prevails.</p><p id="9bf76b3f-45aa-4512-bb90-581e5f766efb" class="">13.3 Everything related to the interpretation, performance and execution of these TOU the laws of the Republic of Germany will be applicable, excluding international civil law. The courts of Berlin, Germany will have exclusive jurisdiction in relation to any related dispute.</p><p id="f9ac9ed6-24c2-4f18-9efb-e8127386c9ee" class=""><strong>As of: November 2020</strong></p></div></article></body></html>

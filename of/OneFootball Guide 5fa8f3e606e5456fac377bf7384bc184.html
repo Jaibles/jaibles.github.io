@@ -1,0 +1,641 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>OneFootball Guide</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5fa8f3e6-06e5-456f-ac37-7bf7384bc184" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/tAjFEKoN.jpg"/></div><h1 class="page-title">OneFootball Guide</h1></header><div class="page-body"><h2 id="a0bcb0e3-f346-4331-a2b4-f33523fe6a31" class="block-color-gray">Explore our Guides and Documentation to learn more about our platform.</h2><p id="8d9b81a5-d433-4659-a442-0a7fe8c832ff" class="">
+</p><p id="a63f0ded-d2e3-4c6e-acff-21342fdf3ba6" class="">Welcome to the OneFootball Network! The OneFootball Network is the world’s leading football content platform, with natively integrated football content being served to millions of global users across our platforms. These guides aims to answer any questions you might have about being on our platform.</p><p id="6720dd4e-2c7f-47c0-819f-7f48b8eb6568" class="">
+</p><p id="6b1345b7-d5a2-414c-8645-75a120db5b8c" class="">
+</p><p id="6bf553ee-3c33-4cbb-b37f-8d9d7c42ef8b" class="block-color-gray"><strong>THE ONEFOOTBALL NETWORK</strong></p><hr id="56667e80-a57b-4653-b9ee-97d279232014"/><ul id="3016955c-c15e-4aa5-b7d4-93b93ddb18b1" class="toggle"><li><details open=""><summary><strong>Payment</strong></summary><ul id="66295482-ebda-49f1-aff8-eb15fb078ad9" class="bulleted-list"><li>Creators are paid for every 1,000 article views based on our <a href="https://company.onefootball.com/campaigns/1740">tier system</a>.<figure id="b5a5b7b8-1481-451d-8133-961e40821e0f" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Payment%20rates%20b5a5b7b81481451d8133961e40821e0f.html">Payment rates</a></figure></li></ul><ul id="d8cd05f9-a284-4219-9cdd-2bbd67eea8d2" class="bulleted-list"><li>To get paid, you must approve credit notes in the Payments section in the Creators Portal.</li></ul><ul id="96c7b4a4-a3f5-4fff-8e3f-40bf0f17f210" class="bulleted-list"><li>Credit notes will only be generated once you have accrued at least €50 in earnings.</li></ul><ul id="cccb3954-78a5-4202-821b-fd4e2b1216ac" class="bulleted-list"><li>New payment data for each month is available in the Creators Portal on the 7th day of the following month (for example, January earnings data becomes visible in the Creators Portal on February 7).</li></ul><ul id="57d9d306-88da-4a02-8d66-c4dd1bb1ab96" class="bulleted-list"><li>You can, however, always check the performance of individual articles in the Content Management section of the Creators Portal.</li></ul><ul id="188b74c0-0d3a-4ab3-beff-27a9832edabe" class="bulleted-list"><li>After approving your credit note, your payment will be processed and you will receive the money within 30 days.</li></ul></details></li></ul><ul id="fd637dd3-7462-4f9c-acec-6aba5fdec8f5" class="toggle"><li><details open=""><summary><strong>Content</strong></summary><ul id="06986eac-551f-4cff-9c9b-9e1af1fa7b91" class="bulleted-list"><li>Your content will automatically appear on OneFootball after you complete the entire onboarding process in the App Settings section of the Creators Portal.</li></ul><ul id="088c0a6d-f6d8-40de-be7b-d0319c8e0156" class="bulleted-list"><li>If you write about one specific team, you will see your content on that team&#x27;s team page in the OneFootball app.</li></ul><ul id="2776a98c-fcd3-446d-afa6-90dd12b7aa30" class="bulleted-list"><li>If you write about football more generally, your articles will be automatically tagged and distributed to the relevant pages in our app.</li></ul><ul id="f8370cba-19ae-427f-839b-ba343bcc6b0e" class="bulleted-list"><li>On top of the automatic placement in the feeds, the OneFootball editorial team may choose to manually place the best or most relevant content in more prominent positions in the app or send it to relevant users via push notifications. Note that this extra visibility is always at the discretion of the editors in the OneFootball Newsroom.</li></ul><ul id="51f0637e-1a68-45b7-ac58-f7401c4f8868" class="bulleted-list"><li>We retrieve your content from your website via the <a href="https://developer.wordpress.org/rest-api/">WordPress REST API</a>.</li></ul><ul id="44b3e354-2b8a-4506-9235-44f65aea1468" class="bulleted-list"><li>As per the terms that you agree to when you join the platform, OneFootball is only interested in football-related content free of any third-party advertising manually inserted into the main body of the article. Note that we do not want to interfere with any advertising or promotion running on your site and we are normally able to find technical solutions that allow you to keep your own advertisement on your own site while keeping it off OneFootball. Please <a href="mailto:network@onefootball.com">contact us</a> if this is a concern of yours.</li></ul><ul id="2ef08262-30cc-4d08-ad74-aa721d3e4107" class="bulleted-list"><li>In order to make your content display natively and beautifully on OneFootball, we need the content to meet certain technical standards. Please read about our technical standards on our Technical Documentation page.</li></ul></details></li></ul><ul id="6c209546-b1cf-4c7b-9b8a-c4e3a45d771e" class="toggle"><li><details open=""><summary><strong>Licensed Images</strong></summary><ul id="9ac68d16-b9d4-44df-b3ce-e3ba1ff097a3" class="bulleted-list"><li>As part of the package, we offer our Creators access to world-class licensed image services, such as Getty Images or IconSport.</li></ul><ul id="74f59308-3655-41f8-b563-c89f0275441f" class="bulleted-list"><li>You can access the licensed images in the <a href="https://creators.onefootball.com/creator/dashboard/getty-images">Licensed Images section of the Creators Portal</a>.</li></ul><ul id="a9ccbc15-3d17-42a8-88fb-39622385d487" class="bulleted-list"><li>Note that licensed images may <em>only</em> be used in an editorial context (directly in your articles and as preview images for links to your articles). You are not permitted to use licensed images on social media or in any other capacity besides articles.</li></ul></details></li></ul><ul id="30bfe8c0-c36b-4aa7-819a-46383630d1b6" class="toggle"><li><details open=""><summary><strong>Support</strong></summary><ul id="c8ebf9b4-ccc2-4089-acff-cbf11b442492" class="bulleted-list"><li>If you require any assistance or have any questions, please contact our support team at <a href="mailto:network@onefootball.com">network@onefootball.com</a>.</li></ul></details></li></ul><ul id="04c44f1c-fd4c-4d1d-a403-c3350d09d654" class="toggle"><li><details open=""><summary><strong>Useful Links</strong></summary><ul id="00c67a97-bb37-4c9c-9d9f-e11ab15cf861" class="bulleted-list"><li><a href="https://creators.onefootball.com/">Creators Portal</a></li></ul><p id="6f63f16d-5334-44a6-b747-46c4f5cee450" class="">
+</p></details></li></ul><p id="3fb82c6c-92a6-4b83-bbd1-ddd032d937bd" class="">
+</p><p id="a4840e76-dec8-4ef1-a556-98a0cf03564d" class="">
+</p><p id="a9d00e9d-453b-4e3d-be4e-4cb1d8070607" class="block-color-gray"><strong>FOR DEVELOPERS</strong></p><hr id="ad5dd86b-1a82-417f-ab58-f214eeb8491c"/><figure id="fa00fa9c-0842-4fea-a9ae-7da39618e318" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/API%20Docs%20fa00fa9c08424feaa9ae7da39618e318.html">API Docs</a></figure><figure id="2fa3b78f-c4ba-4a0f-a968-e046bb2974d5" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/HTML%20Guidelines%202fa3b78fc4ba4a0fa968e046bb2974d5.html">HTML Guidelines</a></figure><p id="ed8b4fc9-2aaf-494e-874b-4d7192a0f68e" class=""><a href="https://developer.wordpress.org/rest-api/">WordPress REST API</a></p><p id="732da6bc-6755-46be-ae74-65275146ab38" class="">
+</p><p id="e02565a0-cf80-4766-9a8e-28b06c892d1b" class="">
+</p><p id="ac91a9d0-dced-4a5a-b41a-ae08248b14e8" class=""><strong><mark class="highlight-gray">LEGAL AGREEMENTS</mark></strong></p><hr id="9eef3562-4957-4a6e-b7f5-ac73e95f6b25"/><figure id="5dc317fb-29cb-4c1c-9247-c98ce35f7b82" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Legal%20agreement%20for%20regular%20blogs%205dc317fb29cb4c1c9247c98ce35f7b82.html">Legal agreement for regular blogs</a></figure><figure id="8aa909a8-c53a-47ba-8591-bc2911274710" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Legal%20agreement%20for%20non-getty%20blogs%208aa909a8c53a47ba8591bc2911274710.html">Legal agreement for non-getty blogs</a></figure><figure id="6d69b661-123a-46d6-8a5e-57d7fddf08f1" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Legal%20agreement%20for%20clubs%20and%20federations%206d69b661123a46d68a5e57d7fddf08f1.html">Legal agreement for clubs and federations</a></figure><figure id="c1555376-2591-4cbf-a476-2efdee38e6bf" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Legal%20agreement%20for%20publishers%20c155537625914cbfa4762efdee38e6bf.html">Legal agreement for publishers</a></figure><figure id="ecfdc42a-ac6b-420e-843d-eac669ed00d1" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Legal%20agreement%20for%20images-only%20editors%20ecfdc42aac6b420e843deac669ed00d1.html">Legal agreement for images-only editors</a></figure><p id="ee157d2b-cac8-4e76-b147-91c33bf241ab" class="">
+</p><p id="23fbcb0d-bbf0-4382-a261-4d080b15a70e" class="">
+</p><p id="1d0afb79-7c79-4b3c-8bfa-8df5abf8528a" class="block-color-gray"><strong>COMPANY</strong></p><hr id="2a3a8b9e-ae86-4a60-b6ab-5349fb2bf294"/><figure id="3d97bcfb-c34f-4e37-831a-479a07c5866e" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Privacy%20Policy%203d97bcfbc34f4e37831a479a07c5866e.html">Privacy Policy</a></figure><figure id="2c3d8609-5724-45d7-8571-9b2189b4fed1" class="link-to-page"><a href="OneFootball%20Guide%205fa8f3e606e5456fac377bf7384bc184/Imprint%202c3d8609572445d785719b2189b4fed1.html">Imprint</a></figure><p id="7390cb08-0d27-403f-bc8c-ef6733a1de61" class="">
+</p><p id="1c77ea5d-4a78-4e5f-a595-140c92f33306" class="">
+</p><p id="ace4be93-57f2-4f46-85f1-dfe5f8d9f949" class="">
+</p><p id="c9250b19-731f-44fe-8380-104fabe1bc9e" class="">
+</p></div></article></body></html>

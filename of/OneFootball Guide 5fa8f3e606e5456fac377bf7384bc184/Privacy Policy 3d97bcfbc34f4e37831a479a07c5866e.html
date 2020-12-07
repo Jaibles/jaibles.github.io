@@ -1,0 +1,628 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Privacy Policy</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3d97bcfb-c34f-4e37-831a-479a07c5866e" class="page sans"><header><h1 class="page-title">Privacy Policy</h1></header><div class="page-body"><p id="564a2119-977b-4633-aadb-83e1f015b2aa" class="">
+</p><p id="ab16bf7a-9f9a-4d30-ad2d-38366d6f34cb" class="">Data protection and the private sphere of the users are very important to OneFootball GmbH (hereinafter referred to as “OneFootball”). The gathering and use of your personal data takes place exclusively within the framework of the statutory provisions of applicable data protection laws. By means of this data privacy policy, OneFootball is providing information concerning the processing of personal data on the OneFootball Network Portal.</p><p id="7a6b4bb4-5c7c-49e6-ad34-ca9820291eaa" class=""><strong>1 Point of contact</strong></p><p id="b654bdc9-4b5f-4688-85b8-49668800c419" class="">The contact and so-called responsible body for the legality of the processing of your personal data under data protection laws is</p><p id="118885fd-a085-4ad6-a983-fc90990f75da" class="">OneFootball GmbH Greifswalder Str. 212 D-10405 Berlin</p><p id="0d4e4d8f-f3c7-43b2-9a1e-e30948fa9d9c" class="">Should you have any questions relating to data protection, you can get in touch with our company’s data protection officer at any time. The data protection officer can be contacted at the postal address above, as well as by email at <a href="mailto:privacy@onefootball.com">privacy@onefootball.com</a>. The data protection officer is also available should you have any queries concerning the transfer of data to third countries and can provide copies or guarantees in the form of standard data protection clauses. Should you have any general concerns or queries, you can also contact OneFootball by email at <a href="mailto:feedback@onefootball.com">feedback@onefootball.com</a>.</p><p id="e9b5496a-e765-4647-988c-4d4e94397fe1" class=""><strong>2 Personal data</strong></p><p id="685980f2-094b-4eb7-9546-5ec43b3cafc9" class="">When you create a OneFootball Network account, you provide us with personal information, including your email address and a password. The data you provide us with is only saved by us using <a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a> to host the Creators portal on a Server in Ireland. Your information is encrypted on these servers and not accessible by employees from AWS.</p><p id="41af7749-abad-4803-89e5-f372827160e6" class="">In cases where personal data is transferred to the USA, Amazon has undertaken to comply with the <a href="https://www.privacyshield.gov/participant?id=a2zt0000000TOWQAA4&amp;status=Active">EU-US Privacy Shield.</a> Additionally, we have also agreed so-called “standard contract clauses”. Personal Data is processed once you click on the &quot;I Agree&quot; button (use with interaction). The legal basis is Article 6 Paragraph 1 b) GDPR, based on the performance of the contract you concluded with us regarding the distribution of your content via our platforms.</p><p id="16ca45fa-9108-4d99-8b75-be59a0e4eb6e" class=""><strong>3 Processing when</strong></p><p id="a478b0b7-2718-4fd4-8518-94bd243f1241" class=""><strong>asking for support</strong></p><p id="42d8d438-6be7-42a1-b0b3-6035603851a6" class="">If you chose to give us feedback using the relevant features on the Portal, we will provide you with an email address <a href="mailto:network@onefootball.com">network@onefootball.com</a>. Your request will be transferred to our service provider Zendesk (an offer from Zendesk Inc., 1019 Market St, San Francisco, CA 94103, USA). Your feedback may be forwarded to a closed slack channel (Slack Technologies Limited). In the event that personal information is transferred to the United States, Zendesk and Slack have agreed to comply with the EU-US Privacy Shield. With Slack, we have also agreed so-called “standard contract clauses”. Zendesk is also one of the few software providers in the world that introduced company-wide “<a href="https://d1eipm3vz40hy0.cloudfront.net/pdf/ZENDESK%20-%20BCR%20Processor%20Policy.pdf">Binding corporate rules</a>”, that have been approved by the EU Commission, Article 47 GDPR. Further information on data protection can be found in the privacy statements of <a href="https://www.zendesk.com/company/customers-partners/privacy-policy/">Zendesk</a>. All data collected will be deleted by Zendesk within 6 months. The legal basis for the processing operations described above is Art. 6 para. 1, f.) GDPR, based on our legitimate interest in improving our product and being accessible for our users.</p><p id="63fcf9c2-01af-40f3-9bc3-4b907dceb930" class=""><strong>4 Processing Creators&#x27; Updates and Announcements</strong></p><p id="24786523-bb15-48c2-b668-d2c4b8502347" class="">The updates and announcements will be sent via &quot;MailChimp&quot;, an email distribution platform of the US provider Rocket Science Group, LLC, 675 Ponce De Leon Ave NE #5000, Atlanta, GA 30308, USA. Your email address will be stored on MailChimp&#x27;s servers in the USA. MailChimp uses this information to send and evaluate emails on our behalf. MailChimp may also use this information to optimize or improve its services, e.g. to technically optimize the sending and display of emails or for commercial purposes, to determine from which countries the recipients come. However, MailChimp does not use your data to write to you or pass it on to third parties. MailChimp is certified under the US-EU data protection agreement &quot;<a href="https://www.privacyshield.gov/participant?id=a2zt0000000TO6hAAG">Privacy Shield</a>&quot; and is therefore committed to complying with EU data protection regulations. Furthermore, we have concluded a &quot;<a href="https://mailchimp.com/legal/data-processing-addendum/">Data Processing Agreement</a>&quot; with MailChimp. This is a contract in which MailChimp undertakes to protect the data of our users, to process it on our behalf in accordance with their data protection regulations and, in particular, not to pass it on to third parties. You can view the privacy policy of MailChimp <a href="https://mailchimp.com/legal/privacy/">here</a>.</p><p id="06189b93-de11-42a7-b3d8-7c8290b307b4" class=""><strong>5 Analysis</strong></p><p id="4dfd3848-3910-497b-b94a-1866d970b3da" class="">In order to improve the Portal, we use technology to analyse the usage behaviour and to evaluate the associated data. These procedures take place anonymously or on the basis of pseudonyms, however never in a directly personal way. Below, we wish to explain these technologies and the providers used for this purpose in more detail. For this purpose, we use so-called number pixels with which we create statistics, which show for example which areas of the Portal are the most popular. The legal basis is Article 6 Paragraph 1 Letter f) GDPR, based on our legitimate interest in analysing usage behaviour in order to improve and further develop the Portal. We use the services of Localytics (a service of Localytics, Inc., 8th Floor, 101 Arch St, Boston, MA 02110, USA). In cases where personal data is transferred to the USA, the so-called “standard contractual clauses” have been agreed with Localytics Inc, which you can view in the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32001D0497">information sheet of the European Communities</a>.</p><p id="8805075f-bf05-497c-bfbc-e6db9f8de761" class=""><strong>6 Your rights</strong></p><p id="b16bf37a-2303-4641-99f8-673c5f3f552e" class="">You have the right to information about the processing of your personal data by us at any time. In this context we will explain the data processing to you and provide you with an overview of the data stored about you. If data stored by us is incorrect or no longer current, you have the right to have this data corrected. You can also request the deletion of your data. If, in exceptional cases, deletion is not possible due to other legal regulations, the data will be blocked - provided the necessary conditions are met - so that it is only available for this legal purpose. You can also have the processing of your personal data restricted if, for example, you doubt the accuracy of the data. Under certain conditions, you also have the right to data transferability, i.e. that we send you upon request a digital copy of the personal data you have provided us with. In order to assert your rights described here, you can contact us at any time using the contact details given above. This also applies if you wish to receive copies of guarantees to prove an adequate level of data protection. Your inquiries regarding the assertion of data protection rights and our answers to them will be kept for documentation purposes for a period of three years and in individual cases for the assertion, exercise or defense of legal claims even beyond this period. The legal basis is Art. 6 Paragraph 1, f.) GDPR, based on our interest in defending against any civil law claims under Art. 82 GDPR, avoiding fines under Art. 83 GDPR and fulfilling our accountability under Art. 5 GDPR. <strong>You have the right to revoke a consent previously provided to us at any time. The consequence of this is that we will no longer process your data in relation to that consent in the future. The revocation of the consent does not affect the legality of the processing carried out on the basis of the consent up to the revocation.</strong> <strong>If we process your data on the basis of legitimate interests, you have the right to object to the processing of your data at any time for on grounds relating to your particular situation. If you object to data processing for direct marketing purposes, you have a general right of objection, which we will implement without requiring you to state your reasons for objecting. If you wish to exercise your right of revocation or objection, simply send an informal message to the contact details listed above.</strong> Finally, you have the right to complain to the regulatory authority responsible for data. You can exercise this right at the regulatory authority in the member country of your place of residence, your place of work, or the place in which the violation allegedly took place. In Berlin, where the registered office of OneFootball is located, the regulatory authority is: the Berlin Data Protection and Freedom of Information Officer, Friedrichstrasse 219, 10969 Berlin.</p><p id="04b9093f-7fd9-49d3-a885-a51f0ebb6068" class=""><strong>7 Changes to the data privacy policy</strong></p><p id="9ca932f7-8e46-41c2-a1f4-2248490f7541" class="">We reserve the right to alter this data privacy policy. The current version can be accessed on our website.</p><p id="e18c8fc2-1bed-402b-98bd-d7c6ea3f0bb7" class=""><strong>As of: April 2020</strong></p></div></article></body></html>

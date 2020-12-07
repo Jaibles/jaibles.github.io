@@ -1,0 +1,628 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Legal agreement for clubs and federations</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6d69b661-123a-46d6-8a5e-57d7fddf08f1" class="page sans"><header><h1 class="page-title">Legal agreement for clubs and federations</h1></header><div class="page-body"><p id="b87c57a1-6562-4ea8-bf59-82e371fcb09f" class="">
+</p><h1 id="7f01d7d2-5db6-42bf-aa27-cedb8b64bccf" class=""><strong>ONEFOOTBALL NETWORK TERMS OF USE</strong></h1><p id="d554882c-0adc-46d3-8b54-36ef6f280f19" class=""><strong>1. Scope</strong></p><p id="e6e79ba8-0d22-4173-9104-25b1caccff10" class="">1.1 OneFootball develops, operates and markets internationally the most comprehensive media platform for football fans. OneFootball provides the mobile apps &quot;OneFootball&quot; on iOS, Android and Harmony OS (&quot; <strong>Apps</strong>&quot;) as well as a web version &quot;www.onefootball.com&quot;, where a football fan reads the latest news of their favourite clubs and leagues, gets results of all the games, watches videos with relevant football content, can follow their favorite entities and receive push notifications of breaking news (together, the &quot; <strong>Platforms</strong>&quot;). OneFootball strives to combine selected authentic and emotional content for fans on the Platforms.</p><p id="8a8f3a03-e571-4a0c-9cbf-53c02cc38fd0" class="">The OneFootball Club Network is OneFootball&#x27;s content platform for professional football clubs. Through the OneFootball Club Network, OneFootball provides clubs with direct digital access to their existing fan base and potential new audiences via the segmented, personalised delivery of official club content.</p><p id="dbd3789b-34f7-4d8b-aaba-c039c0cfe0ee" class="">1.2 Any professional football club that registers to the OneFootball Club Network (&quot; <strong>Club</strong>&quot;) focuses on reaching its fans via many different digital media outlets to engage them off the pitch as well as on it. To this end, Club operates an official website (&quot; <strong>Site</strong>&quot;) as well as different social media channels (e.g. Facebook, Instagram, TikTok – together, the &quot; <strong>Social Media Channels</strong>&quot;) with official club content. The content may vary and consist of, including, but not limited to, articles, texts, information, photographs, illustrations, videos and/or captions (&quot; <strong>Club**</strong> Content**&quot;).</p><p id="6df0d2bc-9b4b-4ef1-b8d6-5d85f207a31a" class="">1.3 The Club seeks to integrate the Club Content from the Site and the Social Media Channels into the Platforms in order for any Club&#x27;s fan who is a OneFootball user to be able to access the Club Content on the Platforms as well.</p><p id="7ad6cd32-eb2b-477e-935a-cc0471ab9fae" class=""><strong>2. Term</strong></p><p id="ce8ee8bd-c168-40c6-8db8-3af531793349" class="">Club shall be bound by these Terms of Use (&quot; <strong>TOU</strong>&quot;) upon registration for the Club Network. The Club&#x27;s registration can be terminated any time by either party in text form (email being sufficient) with a notice period of one month; Club shall send any notice to the following email address: network@onefootball.com. The right to terminate the contract for good cause with immediate effect shall be unaffected thereby.</p><p id="338437f6-87a8-4b68-a110-bd538fe2e41c" class=""><strong>3. Use of Club Content</strong></p><p id="6bbc7e25-582f-4c22-944b-1e162bd8603e" class="">3.1 Transmission of Club Content</p><p id="10ce698f-fcb2-4385-96dd-30751e52d037" class="">Club makes the Club Content available to OneFootball via an API (e.g. WordPress REST API, OneFootball Network API, Club&#x27;s own API) or by letting OneFootball scrape Club&#x27;s Site. Club agrees to make the Club Content available at all times except for maintenance on the Site. Club agrees to remedy any problems appearing with the delivery of the Club Content without undue delay.</p><p id="92124674-5046-4981-a5d3-01a5c04116c1" class="">OneFootball aims to further include Club Content from the Club&#x27;s Social Media Channels (&quot; <strong>Club&#x27;s Social Media Content</strong>&quot;) on the Platforms, once the technical environment is set up. The Parties agree that any such inclusion of Club&#x27;s Social Media Content is subject to further consent of the Club.</p><p id="1dd8538a-acd0-4503-a2c1-0556da823691" class="">3.2 Format and Club Content</p><p id="7f1bf10b-ee1e-40ea-aba0-5a8da83beeaa" class="">a) The Club Content will be distributed accordingly on the Platforms. Club is not entitled to any specific placement of the Club Content within the Platforms, especially not regarding a placement within the first articles of curated collections and/or clubs/leagues/players/competitions pages, except for an appearance in the Club&#x27;s stream that is generated for OneFootball&#x27;s users that have chosen to follow the Club (&quot; <strong>Club Stream</strong>&quot;).</p><p id="75205c3b-74d9-443d-9936-77fb469afd70" class="">b) For any of the Club Content, in whole or in part, that appears on the Platforms, OneFootball will</p><ul id="02dff855-27cd-4c57-afa2-d1f2d692db0c" class="bulleted-list"><li>include attribution to Club in a manner to be determined by OneFootball, including but not limited to the logo (to be uploaded by Club, &quot; <strong>Logo</strong>&quot;) and the Club&#x27;s name and</li></ul><ul id="1405fbc9-b4b0-4548-8607-ce54a21f0b36" class="bulleted-list"><li>tag it automatically with the Club.</li></ul><p id="5a5e92df-6a3e-40e7-b376-bb15fc16a4ef" class="">c) Any Club Content shall have a link, provided by OneFootball, to the legal notice of Club&#x27;s Site.</p><p id="b8ea78b8-56ca-4057-945d-85183c922f72" class="">3.3 Reservation of Rights</p><p id="63f4caa8-21e6-4e7e-9ae4-384f18a22fc5" class="">a) OneFootball reserves the right but is not obligated to remove Club Content that is likely to violate the provisions of these TOU.</p><p id="0374f3be-5537-4997-8657-47eac972971c" class="">b) OneFootball reserves the right to change and improve the Platforms.</p><p id="b26d6fda-06e9-488d-a3ce-4a032048be5d" class="">c) OneFootball reserves the right to extend the distribution of Club Content within the Platforms beyond the Club Stream, including but not limited to sending a push notification or including it in curated or automated content collections.</p><p id="ec2690fe-80dd-4b15-a5f9-a4da9c5455a7" class="">d) OneFootball reserves the right to remove content, that contains advertising, sponsoring, product placement and similar promotional content (“branded content”) from the platform.</p><p id="7b88e873-0682-4d4b-8ad7-2ab2cd311458" class="">3.4 Marketing</p><p id="321fd32e-e70b-4323-ba17-2883053067a5" class="">OneFootball will refrain from adding any advertisement to the Club Content, unless agreed otherwise.</p><p id="58b387d6-adbc-4b36-9f54-df4a5614916e" class="">3.5 Reporting</p><p id="89fa8158-0c5c-426f-aaf0-641efa4efae3" class="">OneFootball will provide a regular report on Club Content read/seen within the Platforms.</p><p id="d338bae6-f356-44a3-9917-e8e71496dc0e" class=""><strong>4. Fees</strong></p><p id="16905f2a-8285-43c6-97c2-9f658fcc62c5" class="">The Parties agree that no fees shall apply for neither party.</p><p id="87753ad5-aaa5-41f8-b2eb-193005ce13ad" class=""><strong>5. Rights</strong></p><p id="c2f013a2-fc2a-460a-9389-58571b08d3e6" class="">5.1 Neither party will acquire any intellectual property rights under these TOU, except for the licenses as specified hereinafter.</p><p id="fb6838dd-9660-447f-ba5e-c5d81f7cdf27" class="">5.2 Club grants OneFootball a non-exclusive, revocable, non-transferable, non-assignable, worldwide license to use</p><ul id="1902c73d-6209-4ffb-b305-98f819eddf7c" class="bulleted-list"><li>its Logo and name limited to the acts that present the Club and the Club Content on the Platforms in the best possible manner to OneFootball&#x27;s users as well as for the use in, including, but not limited to, connection with the promotion of the Club Content and/or the Platforms;</li></ul><ul id="509a701b-6dd5-49a2-b910-f03700faf69d" class="bulleted-list"><li>the Club Content on the Platforms for the duration of the Term, so that the Club Content can be placed and marketed on the Platforms in accordance with these TOU as well as for the use in, including, but not limited to, connection with the promotion of the Club Content and/or the Platforms.</li></ul><p id="077c3079-7e05-4944-8618-833ffdab061a" class=""><strong>6. Prohibited Club Content</strong></p><p id="467c5161-6ab7-4ecf-8231-c177611a3b72" class="">Club ensures and guarantees that none of the Club Content is pornographic, violent, hateful, illegal or rights-infringing. In the case that third parties alert OneFootball of violations of rights (in particular copyright, personal rights) by the Club three times or more, OneFootball has the right to terminate this Agreement with immediate effect. Furthermore, it is prohibited to make available unwanted, misleading or repetitive content (&quot; <strong>Spam</strong>&quot;).</p><p id="3506d641-2815-46d4-929d-fc8a112b4fd1" class=""><strong>7. Guarantees</strong></p><p id="79a04de5-2e0f-401b-8bd6-13c385958a23" class="">7.1 Club warrants that it is the owner of the rights to the Site, the Social Media Channels and to the Club Content and/or it has the rights, licenses, permissions and consents necessary to submit Club Content in accordance with these TOU. In particular, it warrants that no claims have been asserted against them at the time of registration. Finally, Club is not aware of any legal disputes concerning the Site, Social Media Channels or the Club Content.</p><p id="a81e0bd0-80e7-4c9a-a84f-6707d9cd33e4" class="">7.2 Furthermore, Club guarantees that it has all the rights and all the documents necessary to prove, assert and enforce these rights, which it requires in order to fulfil its obligations under these TOU.</p><p id="2f15318f-da04-4386-a6fc-4072455ea180" class=""><strong>8. Survival</strong></p><p id="948b9837-93b0-4e89-980b-7d5b550cf76b" class="">In the event of any termination or expiration of these TOU for any reason, any provisions of these TOU that are, by their nature, intended to survive termination or expiration shall survive.</p><p id="3970fd14-a71b-4fcb-8bbd-b0994217a720" class=""><strong>9. Confidentiality</strong></p><p id="b179becb-5680-4b26-b7aa-53e8f424f11d" class="">These TOU are being executed on a strictly confidential basis. The contents of these TOU may not be disclosed to any third person or entity outside of the Club without the OneFootball&#x27;s prior written consent, except as required by applicable law. Employees of Club will only be informed of the content on a need-to-know basis.</p><p id="c9824aaf-f4e2-4aaa-88dd-d5fbe6859364" class=""><strong>10. Liability</strong></p><p id="91796129-7ab9-4082-9495-6b1c569b034f" class="">Either Party shall only be liable towards the other Party for damages regardless of legal grounds in cases of intent or gross negligence by the damaging party&#x27;s executive bodies or their managing employees. In addition, there shall be liability on the merits in the event of negligent breach of essential contractual obligation(s) that endanger the purpose of the contract and that the other Party duly relies on (Kardinalspflichtverletzung/cardinal obligations); in the latter case, liability shall be limited to compensation for the typical, foreseeable damage. However, nothing in this Agreement shall limit either Party&#x27;s liability: (i) for fraud, (ii) for death or personal injury caused by a Party&#x27;s negligence or that of its servants or agents, or (iii) in relation to any other liability which cannot be excluded or limited by law.</p><p id="f06cdfe6-e996-44ec-a1d2-4c867b752a1b" class=""><strong>11. Indemnity</strong></p><p id="944d3367-2899-45dd-bab8-5899927ab1be" class="">11.1 Club will defend and indemnify and hold harmless OneFootball and each of its subsidiaries, affiliates, agents, representatives, and their respective officers, directors, shareholders, and employees, from and against any and all losses, liabilities, damages and claims, and all related costs and expenses (including reasonable legal fees and disbursements and costs of investigation, litigation, settlement, judgement, interest and penalties) brought by a third party resulting from (i) the use of the Club Content and/or the Club Logo, or other material provided by Club to OneFootball within the framework of this Agreement, or (ii) any breach of applicable data protection laws or regulations.</p><p id="9d384517-1071-46eb-bfd9-982bdb1abc10" class="">11.2 OneFootball will promptly notify Club of all claims of which it becomes aware of (provided that a failure or delay in providing such notice will not relieve the Club&#x27;s obligations except to the extent such party is prejudiced by such failure or delay) and will (i) provide reasonable cooperation to the Club at the Club&#x27;s expense in connection with the defense or settlement of all claims, and (ii) be entitled to participate at its own expense in the defense of all claims. OneFootball agrees that the Club will have sole and exclusive control over the defense and settlement of all claims, provided, however, the Club will not accept any judgment or enter into any settlement, either of which imposes any obligation or liability on OneFootball without its prior written consent.</p><p id="374a1121-8a41-42a8-b7c5-a4f2fa3c54a0" class=""><strong>12.</strong> <strong>Miscellaneous</strong></p><p id="7c3825b0-7136-4a94-8567-3655c7da1f1b" class="">12.1 If any clause in these TOU, or any part of a clause, is found by any court, regulatory or administrative body of competent jurisdiction to be illegal, invalid or unenforceable, and the clause (or the part) in question is not of a fundamental nature to these TOU as a whole, then the legality, validity and enforceability of the remainder of these TOU (including the remainder of the clause which contains the relevant provision) shall not be affected.</p><p id="65e4eb93-a25e-402e-98e5-c30fdde2ff42" class="">12.2 If these TOU are translated into any other language, and there is a discrepancy between the translated text and the English original, the English text prevails.</p><p id="029b4eec-6427-41eb-910e-a6faadb3d10f" class="">12.3 Everything related to the interpretation, performance and execution of these TOU the laws of the Republic of Germany will be applicable, excluding international civil law. The courts of Berlin, Germany will have exclusive jurisdiction in relation to any related dispute.</p><p id="71db5f47-6366-4d62-875e-3e251208ee0b" class="">October 2020</p></div></article></body></html>
