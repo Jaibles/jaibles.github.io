@@ -32,23 +32,24 @@
 
   <div class="container">
       <hr>
-        <h1>Landing Page Design - €2250</h1>
+        <h1>Ongoing design & development services - €1000 per month</h1>
         <p class="about-me">
-          Get a landing page designed and delivered for a fixed fee.
+          Get a website designed and delivered for a fixed monthly fee.
 
         <br><hr>
+
 
         <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
-  style="background-color:#6772E5;color:#FFF;padding:12px 16px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-price_1Hf1v0Czke8U9wLPXOig5Vl8"
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-price_1IC394Czke8U9wLP6ROSvIBW"
   role="link"
   type="button"
 >
-  Purchase
+  Checkout
 </button>
 
 <div id="error-message"></div>
@@ -57,25 +58,31 @@
 (function() {
   var stripe = Stripe('pk_live_51Hf1UCCzke8U9wLP1wMvqURWMLtH6HDXZtNMbrr4nosq9Kf1OSh0nhwf6LDnOG54iiVWrcIZhQUz6OITqsNdQUNX00YDuSTHYH');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1Hf1v0Czke8U9wLPXOig5Vl8');
+  var checkoutButton = document.getElementById('checkout-button-price_1IC394Czke8U9wLP6ROSvIBW');
   checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
     stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1Hf1v0Czke8U9wLPXOig5Vl8', quantity: 1}],
-      mode: 'payment',
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfill-orders
-      successUrl: window.location.protocol + '//ciaran.design/success',
-      cancelUrl: window.location.protocol + '//ciaran.design/canceled',
+      lineItems: [{price: 'price_1IC394Czke8U9wLP6ROSvIBW', quantity: 1}],
+      mode: 'subscription',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://ciaran.design/success',
+      cancelUrl: 'https://ciaran.design/canceled',
     })
     .then(function (result) {
       if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
@@ -83,8 +90,6 @@
   });
 })();
 </script>
-
-
 
 </div>
 
