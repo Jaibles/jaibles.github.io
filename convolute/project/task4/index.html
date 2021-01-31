@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      App
+    </title>
+    <meta charset="UTF-8"/>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="/style.css?v=1611575727722"/>
+    
+    <script src="/js/alpine.js?v=1611575727722"></script>
+  </head>
+  <body>
+    <div class="h-screen flex overflow-hidden bg-white" x-data="{open:false}">
+      <!-- Static sidebar for mobile -->
+<div x-show="open">
+  <div class="fixed inset-0 flex z-40">
+    <div class="fixed inset-0">
+      <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+    </div>
+    <div tabindex="0" class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none">
+      <div class="absolute top-0 right-0 -mr-12 pt-2">
+        <button @click="open = false" type="button" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+          <span class="sr-only">Close sidebar</span>
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+        <div class="flex justify-start lg:w-0 lg:flex-1 ml-2">
+          <a href="/app/overview">
+            <span class="sr-only">Convolute</span>
+            <img class="w-auto h-8" src="/src/images/convolute-logo.svg" alt="Convolute logo">
+          </a>
+        </div>
+        <nav aria-label="Sidebar" class="mt-5">
+          <div class="px-2 space-y-1">
+            <a href="/app/overview" class=" hover:bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded">
+              <svg class="text-gray-800 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Dashboard
+            </a>
+
+            <a href="/tasks/quality" class=" hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded">
+              <svg class="text-gray-800 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Envelope Scans
+            </a>
+
+            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded">
+              <svg class="text-gray-700 group-hover:text-gray-700 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Image processing
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+        <a href="/" class="flex-shrink-0 group block">
+          <div class="flex items-center">
+            <div>
+              <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900 group-hover:text-gray-100">
+                Jonathan Siegel
+              </p>
+              <p class="text-xs font-medium text-gray-800 group-hover:text-gray-200">
+                jonathan@convolute.jp
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-shrink-0 w-14" aria-hidden="true">
+      <!-- Force sidebar to shrink to fit close icon -->
+    </div>
+  </div>
+</div>
+
+<!-- Static sidebar for desktop -->
+<div class="hidden lg:flex lg:flex-shrink-0">
+  <div class="flex flex-col w-56">
+    <div class="flex flex-col h-0 flex-1 bg-black">
+      <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+        <div class="flex items-center flex-shrink-0 px-4">
+          <svg width="128" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.4 21l-4 7M6 9.5l4 6.9m8.8-5.9a2.7 2.7 0 11-5.4 0 2.7 2.7 0 015.4 0zm0 0h8M16 4a12 12 0 110 24 12 12 0 010-24zm-2 14.7a2.7 2.7 0 11-5.4 0 2.7 2.7 0 015.3 0zm9.4 0a2.7 2.7 0 11-5.3 0 2.7 2.7 0 015.3 0z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M47.1 18.7h2.5c-.1 1.1-.5 2-1.3 2.6-.7.6-1.7.9-3 .9s-2.4-.5-3.3-1.4a5 5 0 01-1.3-3.6 5 5 0 011.3-3.5c.9-1 2-1.4 3.3-1.4 1.3 0 2.3.3 3 .9.8.6 1.2 1.5 1.3 2.6H47c-.2-1-.7-1.5-1.7-1.5h-.2c-.4 0-.8.1-1.1.4l-.7 1-.2 1.6c0 .5 0 1 .2 1.4.2.5.4.8.7 1 .3.4.7.5 1.1.5h.2c1 0 1.5-.5 1.7-1.5zM59.1 20.8c-.8 1-2 1.4-3.4 1.4s-2.5-.5-3.4-1.4a5 5 0 01-1.3-3.6 5 5 0 011.3-3.5c.9-1 2-1.4 3.4-1.4s2.6.5 3.4 1.4a5 5 0 011.4 3.6 5 5 0 01-1.4 3.5zm-3.3-.6c.7 0 1.2-.3 1.6-.8.4-.5.6-1.2.6-2.1 0-1-.2-1.7-.6-2.2-.4-.5-1-.8-1.6-.8h-.2c-.6 0-1.2.3-1.6.8-.3.5-.5 1.2-.5 2.2 0 .9.2 1.6.5 2.1.4.5 1 .8 1.6.8h.2zM65 16.7V22h-2.5v-9.5h2.4v1.4c.3-.5.7-.9 1.2-1.2.5-.2 1.1-.4 1.7-.4 1.1 0 2 .3 2.5 1s.8 1.5.8 2.6V22h-2.5v-5.8c0-.6 0-1-.4-1.4-.2-.3-.6-.5-1-.5H67c-.6 0-1 .2-1.5.7-.4.5-.6 1-.6 1.7zM79.2 22h-3.5l-3.3-9.5H75l2.5 7.7 2.5-7.7h2.5L79.2 22zM91.4 20.8c-.9 1-2 1.4-3.4 1.4s-2.6-.5-3.5-1.4a5 5 0 01-1.3-3.6 5 5 0 011.3-3.5c1-1 2-1.4 3.5-1.4 1.4 0 2.5.5 3.4 1.4a5 5 0 011.3 3.6 5 5 0 01-1.3 3.5zm-3.4-.6c.7 0 1.2-.3 1.6-.8.4-.5.6-1.2.6-2.1 0-1-.2-1.7-.6-2.2-.4-.5-.9-.8-1.6-.8H88c-.7 0-1.2.3-1.6.8-.4.5-.6 1.2-.6 2.2 0 .9.2 1.6.6 2.1.4.5 1 .8 1.6.8h.1zM94.7 22V8.7h2.5V22h-2.5zM105.6 17.8v-5.3h2.5V22h-2.5v-1.4a3.3 3.3 0 01-2.7 1.6c-1.1 0-2-.3-2.5-1a4 4 0 01-.8-2.6v-6.1h2.5v5.8c0 .6.1 1 .4 1.4.2.3.6.5 1 .5h.2c.5 0 1-.2 1.4-.7.3-.5.5-1 .5-1.7zM116.5 20v2h-2.4c-.8 0-1.4-.2-1.8-.6-.4-.5-.6-1-.6-1.9v-5h-2v-2h2v-3h2.4v3h2.2v2H114v4.4c0 .4 0 .7.2.8.2.1.4.2.9.2h1.3zM126.6 19a4 4 0 01-1.5 2.3c-.7.6-1.7.9-2.8.9a4.5 4.5 0 01-3.2-1.3c-.4-.4-.7-1-1-1.6-.2-.6-.3-1.3-.3-2 0-1.5.4-2.7 1.2-3.6.8-1 1.9-1.4 3.3-1.4a4 4 0 013.2 1.4c.7.9 1.1 2 1.1 3.4v1h-6.4c0 .6.2 1 .7 1.5.4.4.9.6 1.4.6h.1c.5 0 .9-.1 1.2-.3l.5-1h2.5zm-4.5-4.7a2 2 0 00-1.3.5c-.4.3-.6.8-.6 1.3h4c0-.5-.2-1-.6-1.3a2 2 0 00-1.4-.5z" fill="#ffffff"/>
+          </svg>
+        </div>
+        <nav class="mt-5 flex-1" aria-label="Sidebar">
+          <div class="px-2">
+            <a href="/app/overview" class=" hover:bg-gray-800 text-white group flex items-center px-2 py-2 text-sm rounded">
+              <svg class="text-gray-300 mr-3 h-5 w-5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 15.8333V10.8333C7.5 10.3913 7.3244 9.96738 7.01184 9.65482C6.69928 9.34226 6.27536 9.16667 5.83333 9.16667H4.16667C3.72464 9.16667 3.30072 9.34226 2.98816 9.65482C2.67559 9.96738 2.5 10.3913 2.5 10.8333V15.8333C2.5 16.2754 2.67559 16.6993 2.98816 17.0118C3.30072 17.3244 3.72464 17.5 4.16667 17.5H5.83333C6.27536 17.5 6.69928 17.3244 7.01184 17.0118C7.3244 16.6993 7.5 16.2754 7.5 15.8333ZM7.5 15.8333V7.5C7.5 7.05797 7.67559 6.63405 7.98816 6.32149C8.30072 6.00893 8.72464 5.83333 9.16667 5.83333H10.8333C11.2754 5.83333 11.6993 6.00893 12.0118 6.32149C12.3244 6.63405 12.5 7.05797 12.5 7.5V15.8333M7.5 15.8333C7.5 16.2754 7.67559 16.6993 7.98816 17.0118C8.30072 17.3244 8.72464 17.5 9.16667 17.5H10.8333C11.2754 17.5 11.6993 17.3244 12.0118 17.0118C12.3244 16.6993 12.5 16.2754 12.5 15.8333M12.5 15.8333V4.16667C12.5 3.72464 12.6756 3.30072 12.9882 2.98816C13.3007 2.67559 13.7246 2.5 14.1667 2.5H15.8333C16.2754 2.5 16.6993 2.67559 17.0118 2.98816C17.3244 3.30072 17.5 3.72464 17.5 4.16667V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H14.1667C13.7246 17.5 13.3007 17.3244 12.9882 17.0118C12.6756 16.6993 12.5 16.2754 12.5 15.8333Z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="mt-0.5">Dashboard</span>
+            </a>
+            <a href="/app/overview" class=" hover:bg-gray-800 text-white group flex items-center px-2 py-2 text-sm rounded">
+              <svg class="text-gray-300 mr-3 h-5 w-5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.8333 9.16667H4.16667M15.8333 9.16667C16.2754 9.16667 16.6993 9.34226 17.0118 9.65482C17.3244 9.96738 17.5 10.3913 17.5 10.8333V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V10.8333C2.5 10.3913 2.67559 9.96738 2.98816 9.65482C3.30072 9.34226 3.72464 9.16667 4.16667 9.16667M15.8333 9.16667V7.5C15.8333 7.05797 15.6577 6.63405 15.3452 6.32149C15.0326 6.00893 14.6087 5.83333 14.1667 5.83333M4.16667 9.16667V7.5C4.16667 7.05797 4.34226 6.63405 4.65482 6.32149C4.96738 6.00893 5.39131 5.83333 5.83333 5.83333M14.1667 5.83333V4.16667C14.1667 3.72464 13.9911 3.30072 13.6785 2.98816C13.366 2.67559 12.942 2.5 12.5 2.5H7.5C7.05797 2.5 6.63405 2.67559 6.32149 2.98816C6.00893 3.30072 5.83333 3.72464 5.83333 4.16667V5.83333M14.1667 5.83333H5.83333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="mt-0.5">Projects</span>
+            </a>
+            <a href="/app/overview" class=" hover:bg-gray-800 text-white group flex items-center px-2 py-2 text-sm rounded">
+              <svg class="text-gray-300 mr-3 h-5 w-5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.33337 5.83333V14.1667C3.33337 16.0083 6.31837 17.5 10 17.5C13.6817 17.5 16.6667 16.0083 16.6667 14.1667V5.83333M3.33337 5.83333C3.33337 7.675 6.31837 9.16667 10 9.16667C13.6817 9.16667 16.6667 7.675 16.6667 5.83333M3.33337 5.83333C3.33337 3.99167 6.31837 2.5 10 2.5C13.6817 2.5 16.6667 3.99167 16.6667 5.83333M16.6667 10C16.6667 11.8417 13.6817 13.3333 10 13.3333C6.31837 13.3333 3.33337 11.8417 3.33337 10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="mt-0.5">Datasets</span>
+            </a>
+            <a href="/app/overview" class=" hover:bg-gray-800 text-white group flex items-center px-2 py-2 text-sm rounded">
+              <svg class="text-gray-300 mr-3 h-5 w-5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 15L16.6667 14.1667V12.0833M11.6667 8.33333L10 9.16667L11.6667 8.33333ZM10 9.16667L8.33337 8.33333L10 9.16667ZM10 9.16667V11.25V9.16667ZM16.6667 5.83333L15 6.66667L16.6667 5.83333ZM16.6667 5.83333L15 5L16.6667 5.83333ZM16.6667 5.83333V7.91667V5.83333ZM11.6667 3.33333L10 2.5L8.33337 3.33333H11.6667ZM3.33337 5.83333L5.00004 5L3.33337 5.83333ZM3.33337 5.83333L5.00004 6.66667L3.33337 5.83333ZM3.33337 5.83333V7.91667V5.83333ZM10 17.5L8.33337 16.6667L10 17.5ZM10 17.5L11.6667 16.6667L10 17.5ZM10 17.5V15.4167V17.5ZM5.00004 15L3.33337 14.1667V12.0833L5.00004 15Z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="mt-0.5">Models</span>
+            </a>
+
+            <div class="mt-8 mb-2 ml-2">
+              <h6 class="text-gray-700 text-xs font-bold uppercase">Projects</h6>
+            </div>
+            <a href="/tasks/quality" class=" hover:bg-gray-900 text-gray-200 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded">
+              <svg class="text-gray-300 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span class="mt-0.5">Envelope Scans</span>
+            </a>
+
+            <a href="#" class="text-gray-700 hover:text-gray-700 group flex items-center px-2 py-2 text-sm font-medium rounded">
+              <svg class="text-gray-700 group-hover:text-gray-700 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="mt-0.5">Image processing</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <a href="/project/new" class=" hover:bg-gray-900 m-2 mb-3 text-white group flex items-center px-2 py-2 text-sm font-medium rounded">
+        <svg class="text-gray-300 mr-3 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+        <span class="mt-0.5">New Project</span>
+      </a>
+
+      <div class="flex-shrink-0 flex border-t border-gray-900 p-4">
+        <a href="/trainer/projects/" class="flex-shrink-0 w-full group block">
+          <div class="flex items-center">
+            <div>
+              <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-200 group-hover:text-gray-100">
+                Jonathan Siegel
+              </p>
+              <p class="text-xs font-medium text-gray-300 group-hover:text-gray-200">
+                Dataset Owner
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="flex flex-col min-w-0 flex-1 overflow-hidden">
+        <div class="lg:hidden">
+  <div class="flex items-center justify-between bg-gray-50 border-b border-gray-200 px-4 py-1.5">
+    <div class="flex justify-start lg:w-0 lg:flex-1">
+      <a href="/app-overview">
+        <span class="sr-only">Convolute</span>
+        <img class="w-auto h-8" src="/src/images/convolute-logo.svg" alt="Convolute logo">
+      </a>
+    </div>
+    <div>
+      <button @click="open = true" type="button" class="-mr-3 h-12 w-12 inline-flex items-center justify-center rounded text-gray-500 hover:text-gray-900">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+        <div class="h-full">
+          <div class="border-b bg-gray-50 border-gray-200">
+            <div class="inset-0 px-4 sm:px-6 lg:px-8">
+              <nav class="-mb-px flex space-x-2" aria-label="Tabs">
+                <a href="/tasks/quality" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                  Overview
+                </a>
+                <a href="/tasks/task10" class="border-cobalt-500 text-cobalt-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" aria-current="page">
+                  Tasks
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="flex-1 z-0 flex overflow-hidden h-full">
+            <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none xl:order-last" tabindex="0">
+              <!-- Start main area-->
+              <div class="absolute inset-0 py-4">
+                <div class="h-full">
+                  <div class="pb-4 px-4 border-b border-gray-100 sm:flex sm:items-center sm:justify-between">
+                    <div>
+                      <div class="flex items-center">
+                        <h3 class="text-lg leading-6 font-bold text-gray-900">
+                          5a1dbd15014b821c1948c351
+                        </h3>
+                        <span class="Fixed h-5 py-1">
+                          <div class="mt-0.5">Fixed</div>
+                        </span>
+                      </div>
+
+                      
+                      <p class="mt-1 font-mono max-w-4xl text-xs text-gray-500">
+                        <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Thu, 31 Dec 2020 04:10:17 GMT</time>
+                      </p>
+                      
+                    </div>
+
+                    
+                      <div class="flex space-x-2">
+                        <div>
+                          <button class="btn btn-secondary">
+                            Download JSON
+                          </button>
+                        </div>
+                        <div>
+                          <span class="relative z-0 inline-flex shadow-sm rounded">
+                            <button type="button" class="relative inline-flex items-center px-4 py-2 rounded-l border border-gray-200 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                              Fixed
+                            </button>
+                            <span class="-ml-px relative block">
+                              <button id="option-menu" type="button" class="relative inline-flex items-center px-2 py-2 rounded-r border border-gray-200 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                <span class="sr-only">Open options</span>
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+
+                              <div class="origin-top-right absolute right-0 mt-2 -mr-1 w-56 rounded shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="option-menu">
+                                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                    Accept
+                                  </a>
+                                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                    Fix
+                                  </a>
+                                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                    Reject
+                                  </a>
+                                </div>
+                              </div>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    
+
+                    
+                  </div>
+
+                  <div class="grid grid-cols-3 gap-1">
+                    <div class="col-span-2">
+                      <h3 class="m-4 font-bold">Image</h3>
+                      <div class="relative flex items-center justify-center">
+                        <div class="w-full bg-gray-200">
+                          
+                            
+<img class="mx-auto py-6 px-4 inset-0 w-full h-full object-cover" src="/src/images/envelope.jpg" alt="">
+
+                          
+                        </div>
+                        <img class="absolute w-100 h-100 object-cover" src="/src/images/envelope-overlay.svg" alt="">
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="mt-4 mx-2 flex justify-between items-center">
+                        <h3 class="font-bold">Results</h3>
+                        <h6 class="text-xs text-gray-500 font-mono font-bold uppercase hidden">accuracy</h6>
+                      </div>
+                      <div class="space-y-6 pt-4 px-2">
+                        <div class="">
+                          <div class="flex justify-between">
+                            <label for="company_website" class="inline-flex px-1 bg-mustard-500 block font-mono uppercase text-xs text-black">
+                              IBM Code
+                            </label>
+                            <label for="company_website" class="inline-flex px-1 bg-black block font-mono uppercase text-xs text-white hidden">
+                              1.0
+                            </label>
+                          </div>
+                          <div class="mt-1 flex rounded">
+                            <input disabled type="text" class="focus:ring-indigo-500 px-2 py-2 bg-gray-100 focus:border-indigo-500 flex-1 block w-full  sm:text-sm border-gray-300"
+                              value="753542"
+                            >
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="flex justify-between">
+                            <label for="company_website" class="inline-flex px-1 bg-cobalt-500 block font-mono uppercase text-xs text-white">
+                              Sender name
+                            </label>
+                            <label for="company_website" class="inline-flex px-1 bg-black block font-mono uppercase text-xs text-white hidden">
+                              0.95
+                            </label>
+                          </div>
+                          <div class="mt-1 flex rounded">
+                            <input disabled type="text" class="focus:ring-indigo-500 px-2 py-2 bg-gray-100 focus:border-indigo-500 flex-1 block w-full  sm:text-sm border-gray-300"
+                              value="Freddie Beck"
+                            >
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="flex justify-between">
+                            <label for="company_website" class="inline-flex px-1 bg-cobalt-500 block font-mono uppercase text-xs text-white">
+                              Sender address
+                            </label>
+                            <label for="company_website" class="inline-flex px-1 bg-black block font-mono uppercase text-xs text-white hidden">
+                              0.80
+                            </label>
+                          </div>
+                          <div class="mt-1 flex rounded">
+                            <input disabled type="text" class="focus:ring-indigo-500 px-2 py-2 bg-gray-100 focus:border-indigo-500 flex-1 block w-full  sm:text-sm border-gray-300"
+                              value="Oshiage, 1 Chome−1−2 東京スカイツリータウン・ソラマチ"
+                            >
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="flex justify-between">
+                            <label for="company_website" class="inline-flex px-1 bg-orange-500 block font-mono uppercase text-xs text-white">
+                              RECIPIENT address
+                            </label>
+                            <label for="company_website" class="inline-flex px-1 bg-black block font-mono uppercase text-xs text-white hidden">
+                              0.95
+                            </label>
+                          </div>
+                          <div class="mt-1 flex rounded">
+                            <input disabled type="text" class="focus:ring-indigo-500 px-2 py-2 bg-gray-100 focus:border-indigo-500 flex-1 block w-full  sm:text-sm border-gray-300"
+                              value="Lincolnstraße 10, 20359 Hamburg"
+                            >
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="flex justify-between">
+                            <label for="company_website" class="inline-flex px-1 bg-orange-500 block font-mono uppercase text-xs text-white">
+                              RECIPIENT name
+                            </label>
+                            <label for="company_website" class="inline-flex px-1 bg-black block font-mono uppercase text-xs text-white hidden">
+                              0.95
+                            </label>
+                          </div>
+                          <div class="mt-1 flex rounded">
+                            <input disabled type="text" class="focus:ring-indigo-500 px-2 py-2 bg-gray-100 focus:border-indigo-500 flex-1 block w-full  sm:text-sm border-gray-300"
+                              value="Herrn John Lührs"
+                            >
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <p><a class="p-4" href="/project/task8/"></a></p>
+
+                </div>
+              </div>
+              <!-- End main area -->
+            </main>
+            <aside class="hidden sm:block relative order-first xl:flex xl:flex-col flex-shrink-0 w-88 border-r border-gray-100 overflow-y-auto">
+              <div class="h-full">
+                <div class="bg-white overflow-hidden">
+
+                  
+
+                  <ul class="divide-y divide-gray-100"><li >
+                      <a href="/project/task10/"
+                        class=" block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              5b2d41bd14014b841c1428c613
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Ready for Audit">
+                                <div class="mt-0.5">Ready for Audit</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Mon, 04 Jan 2021 07:20:11 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task9/"
+                        class=" block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              5b2d41bd14014b841c1428c613
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Ready for Audit">
+                                <div class="mt-0.5">Ready for Audit</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Sun, 03 Jan 2021 07:20:11 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task1/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              5a1dbd15014b821c1948c351
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Accepted">
+                                <div class="mt-0.5">Accepted</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Fri, 01 Jan 2021 04:10:17 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task8/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              5a1dbd15014b821c1948c351
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Fixed">
+                                <div class="mt-0.5">Fixed</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Thu, 31 Dec 2020 04:10:17 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li  class="bg-cobalt-100" >
+                      <a href="/project/task4/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate text-cobalt-500">
+                              5a1dbd15014b821c1948c351
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Fixed">
+                                <div class="mt-0.5">Fixed</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Thu, 31 Dec 2020 04:10:17 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task6/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              5b2d41bd14014b841c1428c613
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Rejected">
+                                <div class="mt-0.5">Rejected</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Sun, 27 Dec 2020 07:20:11 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task3/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              5b2d41bd14014b841c1428c613
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Accepted">
+                                <div class="mt-0.5">Accepted</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Sun, 27 Dec 2020 07:20:11 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task5/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              6sa1d41bd15014b821c1948c351
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Fixed">
+                                <div class="mt-0.5">Fixed</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Thu, 30 Jan 2020 04:10:17 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task7/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              6sa1d41bd15014b821c1948c351
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Accepted">
+                                <div class="mt-0.5">Accepted</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Thu, 09 Jan 2020 04:10:17 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li><li >
+                      <a href="/project/task2/"
+                        class="opacity-50 block hover:bg-cobalt-100"
+                        >
+                        <div class="px-4 py-3 sm:px-4">
+                          <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-black truncate ">
+                              6sa1d41bd15014b821c1948c351
+                            </p>
+                            <div class="ml-2 flex-shrink-0 flex">
+                              <span class="Fixed">
+                                <div class="mt-0.5">Fixed</div>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-1 sm:flex sm:justify-between">
+                            <div class="sm:flex">
+                              
+                              <p class="flex font-mono items-center text-xs text-gray-500">
+                                <time datetime="Thu Dec 31 2020 04:10:17 GMT+0000 (Greenwich Mean Time)">Thu, 09 Jan 2020 04:10:17 GMT</time>
+                              </p>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li></ul>
+                </div>
+              </div>
+              <!-- End secondary column -->
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
