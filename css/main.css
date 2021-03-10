@@ -297,8 +297,23 @@ hr {
 
 .testimonial {
   color: #242424;
-  max-width: 640px;
+  max-width: 700px;
   border-radius: 6px;
+  position: relative;
+}
+
+.testimonial:before {
+  content: url("../img/quote.svg");
+  position: absolute;
+  top: -10px;
+  left: -24px;
+  z-index: 0;
+}
+
+.testimonial p {
+  z-index: 1;
+  position: relative;
+}
 }
 
 .align-center {
